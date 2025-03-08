@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkQW5pbWFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SpoNov/Gos/Gos/Views/AddAnimal/IndexTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkQW5pbWFsXEluZGV4VGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SpoNov/Gos/Gos/Views/Authorization/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

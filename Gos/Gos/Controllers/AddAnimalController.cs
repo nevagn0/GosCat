@@ -56,8 +56,13 @@ namespace Gos.Controllers
             var user = _projectContext.Users.FirstOrDefault(u => u.Id == userId);
 
             ViewBag.UserId = userId;
-            ViewBag.UserFullName = $"{user.Firstname} {user.Secondname}";
+            ViewBag.UserFullName = $"{user.Secondname} {user.Firstname}";
             return View("Index");
+        }
+
+        public void PageNewAnimal(Animal animal)
+        {
+
         }
 
     }
