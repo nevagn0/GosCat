@@ -12,6 +12,7 @@
 </div>
 
 <form method="post" asp-action="Index">
+    <input type="hidden" asp-for="UserId" value="@ViewBag.UserId" />
 
     <div>
         <label asp-for="Age"></label>

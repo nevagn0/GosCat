@@ -11,15 +11,43 @@ namespace Gos.Controllers
         {
             _projectContext = projectContext;
         }
+        [HttpPost]
         public IActionResult Index(Animal animal)
         {
             if (ModelState.IsValid)
             {
+                // Добавляем животное в базу данных
                 _projectContext.Animals.Add(animal);
                 _projectContext.SaveChanges();
 
+                // Перенаправляем на главную страницу или другую страницу
+                return RedirectToAction("Index", "AddAnimal");
             }
+
+            // Если данные не прошли валидацию, возвращаем форму с ошибками
             return View(animal);
+        }
+
+        public IActionResult Index()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (userId == null)
+            {
+                return RedirectToAction("Index", "Authorization");
+            }
+
+            var user = _projectContext.Users.FirstOrDefault(u => u.Id == userId);
+
+            if (user == null)
+            {
+                return RedirectToAction("Error");
+            }
+
+            ViewBag.UserId = userId;
+            ViewBag.UserFullName = $"{user.Firstname} {user.Secondname}";
+
+            return View();
         }
 
         public IActionResult AddAnimalPage()
@@ -29,7 +57,7 @@ namespace Gos.Controllers
 
             ViewBag.UserId = userId;
             ViewBag.UserFullName = $"{user.Firstname} {user.Secondname}";
-            return RedirectToAction("Index", "AddAnimal");
+            return View("Index");
         }
 
     }
