@@ -348,10 +348,10 @@ D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets\msbuild.build.Gos.props
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Gos.props
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Gos.props
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets.pack.json
-D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\Gos.csproj.Up2Date
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\Gos.dll
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\refint\Gos.dll
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\Gos.pdb
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\Gos.genruntimeconfig.cache
 D:\SpoNov\Gos\Gos\obj\Debug\net8.0\ref\Gos.dll
+D:\SpoNov\Gos\Gos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

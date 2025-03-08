@@ -1,6 +1,7 @@
 ﻿using Gos.Models;
 using Microsoft.AspNetCore.Mvc;
 
+using Gos.Controllers;
 public class AuthorizationController : Controller
 {
     private readonly SpoProjectContext _projectContext;

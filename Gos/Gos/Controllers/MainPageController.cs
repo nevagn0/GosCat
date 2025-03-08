@@ -6,7 +6,7 @@ namespace Gos.Controllers
 {
     public class MainPageController : Controller
     {
-        private readonly SpoProjectContext _context; // Контекст базы данных
+        private readonly SpoProjectContext _context;
 
         public MainPageController(SpoProjectContext context)
         {
