@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Gos.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <span>КотУслуги</span>
+        <nav>
+            <a href="/">Главная</a>
+            <a asp-controller="Registration" asp-action="Index">Регистрация</a>
+            <a asp-controller="Authorization" asp-action="Index">Вход</a>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
