@@ -1,22 +1,29 @@
 ﻿@model Animal
 @{
-    ViewData["Title"] = "Животное";
+    ViewData["Title"] = "Добавить животное";
 }
-<div aligh ="center">Добавить животное</div>
-<div aligh ="center">
-    <label asp-for="Age"></label>
-    <input asp-for="Age" />
-    <span asp-validation-for="Age"></span>
 
-    <label asp-for="Nameanimal"></label>
-    <input asp-for="Nameanimal" />
-    <span asp-validation-for="Nameanimal"></span>
-
-    <div asp-for="UserId"></div>
-    <div asp-for="UserId" />
-    <span asp-validation-for="UserId"></span>
-
-
+<div align="center">
+    <h1>Добавить животное</h1>
 </div>
-<input type="submit" value="Добавить" />
 
+<div align="center">
+    <p>Пользователь: @ViewBag.UserFullName</p>
+</div>
+
+<form method="post" asp-action="Index">
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+    </div>
+
+    <div>
+        <label asp-for="Nameanimal"></label>
+        <input asp-for="Nameanimal" />
+        <span asp-validation-for="Nameanimal"></span>
+    </div>
+
+    <input type="submit" value="Добавить" />
+</form>

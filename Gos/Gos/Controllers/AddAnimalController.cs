@@ -17,13 +17,18 @@ namespace Gos.Controllers
             {
                 _projectContext.Animals.Add(animal);
                 _projectContext.SaveChanges();
+
             }
             return View(animal);
         }
 
         public IActionResult AddAnimalPage()
         {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            var user = _projectContext.Users.FirstOrDefault(u => u.Id == userId);
 
+            ViewBag.UserId = userId;
+            ViewBag.UserFullName = $"{user.Firstname} {user.Secondname}";
             return RedirectToAction("Index", "AddAnimal");
         }
 
