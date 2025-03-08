@@ -5,7 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Регистрация контекста базы данных с PostgreSQL
 builder.Services.AddDbContext<SpoProjectContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Используем только PostgreSQL
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Добавьте сервисы для работы с сессиями
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Время жизни сессии (30 минут)
+    options.Cookie.HttpOnly = true; // Защита от XSS
+    options.Cookie.IsEssential = true; // Сессия будет работать даже если пользователь не принял куки
+});
 
 builder.Services.AddControllersWithViews();
 
@@ -22,6 +30,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Добавьте middleware для использования сессий
+app.UseSession();
 
 app.UseAuthorization();
 

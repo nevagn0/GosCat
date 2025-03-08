@@ -1,7 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Добро пожаловать   ";
+    ViewData["Title"] = "Добро пожаловать";
 }
 
 <div class="text-center">
-    <h1>Добро пожаловать</h1>
+    <h1>Добро пожаловать!</h1>
+    <p>Пожалуйста, выберите действие:</p>
+
+    <div>
+        <a asp-controller="Authorization" asp-action="Index" class="btn btn-primary">Вход</a>
+        <a asp-controller="Registration" asp-action="Index" class="btn btn-secondary">Регистрация</a>
+    </div>
 </div>

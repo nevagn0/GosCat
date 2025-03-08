@@ -22,12 +22,15 @@ namespace Gos.Controllers
             {
                 var NameAuth = _projectContext.Users.FirstOrDefault(b => b.Firstname == user.Firstname);
                 var SecondAuth = _projectContext.Users.FirstOrDefault(h => h.Secondname == user.Secondname);
-                var ThirdAuth = _projectContext.Users.FirstOrDefault(d => d.Therdname == user.Therdname);
                 var PhoneAuth = _projectContext.Users.FirstOrDefault(k => k.Phone == user.Phone);
 
                 if (NameAuth != null && SecondAuth != null && PhoneAuth != null)
                 {
-                    return RedirectToAction("Index", "MainPage"); 
+                    // Сохраняем ID пользователя в сессии
+                    HttpContext.Session.SetInt32("UserId", NameAuth.Id);
+
+                    // Перенаправляем на главную страницу
+                    return RedirectToAction("Index", "MainPage");
                 }
                 else
                 {
