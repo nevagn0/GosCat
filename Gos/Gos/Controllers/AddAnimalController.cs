@@ -60,9 +60,9 @@ namespace Gos.Controllers
             return View("Index");
         }
 
-        public void PageNewAnimal(Animal animal)
+        public IActionResult PageNewAnimal(Animal animal)
         {
-
+            return View("IndexTable");
         }
 
     }
